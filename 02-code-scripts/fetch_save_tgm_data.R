@@ -1,8 +1,7 @@
 library(httr)
 library(tidyRSS)
-
-# iN_feed <- "https://www.inaturalist.org/observations.atom?verifiable=true&page=&spam=false&place_id=97394&user_id=&project_id=&taxon_id=56830&swlng=&swlat=&nelng=&nelat=&lat=&lng="
-# df <- tidyfeed(iN_feed)
+library(tidyverse)
+library(jsonlite)
 
 url_list <- c(
   "https://www.thegreatmorel.com/maps/geojson/layer/2,3,4,5,8/?callback=jsonp&full=yes&full_icon_url=yes",
@@ -21,7 +20,8 @@ for (url in url_list) {
   json <- sub("jsonp(", "", txt, fixed = TRUE)
   json <- sub(");$", "", json)
 
-  morel_data <- rbind(morel_data, jsonlite::fromJSON(json)[["features"]])
+  morel_data <- rbind(morel_data, jsonlite::fromJSON(json, flatten = TRUE)[["features"]])
 }
 
-require(c(httr, tidyRSS))
+write_csv(morel_data, "01-raw_data/tgm_data.csv")
+
