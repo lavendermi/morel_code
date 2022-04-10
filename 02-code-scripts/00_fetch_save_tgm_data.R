@@ -1,3 +1,6 @@
+# this script fetchs and saves the morel occurrence data from The Great Morel
+# We only want to run this occasionally to refresh the data.
+
 library(httr)
 library(tidyRSS)
 library(tidyverse)
@@ -12,7 +15,7 @@ url_list <- c(
   "https://www.thegreatmorel.com/maps/geojson/layer/38,39,40,41,42,43/?callback=jsonp&full=yes&full_icon_url=yes"
 )
 
-morel_data <- data.frame()
+tgm_morel_data <- data.frame()
 
 for (url in url_list) {
   req <- httr::GET(url)
@@ -20,8 +23,9 @@ for (url in url_list) {
   json <- sub("jsonp(", "", txt, fixed = TRUE)
   json <- sub(");$", "", json)
 
-  morel_data <- rbind(morel_data, jsonlite::fromJSON(json, flatten = TRUE)[["features"]])
+  tgm_morel_data <- rbind(tgm_morel_data, jsonlite::fromJSON(json, flatten = TRUE)[["features"]])
 }
 
-write_csv(morel_data, "01-raw_data/tgm_data.csv")
+write_csv(tgm_morel_data, "01-raw_data/tgm_data.csv")
+
 
