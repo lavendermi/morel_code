@@ -22,7 +22,7 @@ merged_morel_data <-
       mutate(source_db = "inat", datetime = ymd_hms(datetime))
   )
 
-write_csv(merged_morel_data, "01-raw_data/morel_data.csv")
+write_csv(merged_morel_data, "01-raw_data/merged_morel_data.csv")
 # https://stackoverflow.com/questions/8751497/latitude-longitude-coordinates-to-state-code-in-r
 # https://rpubs.com/FelipeMonroy/619723
 # https://www.naturalearthdata.com
