@@ -31,7 +31,7 @@ write_csv(merged_morel_data, "01-raw_data/merged_morel_data.csv")
 #### This is play / test code to see what plotting would look like. This will be
 #### moved to a better place at some point
 
-plot_region <- map_data(map = "world", region = c("canada"))
+plot_region <- map_data(map = "world", region = c("usa", "canada", "mexico"))
 
 
 morel_ggplot <-
