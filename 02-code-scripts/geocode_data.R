@@ -9,8 +9,10 @@ merged_morel_data <- sample_n(read_csv("01-raw_data/merged_morel_data.csv"), 100
 startg <- Sys.time()
 
 # Reading each of the maps. dsn is the folder of the map and layer is the name of the .shp file inside.
-ecoregions_map <- readOGR(dsn = "01-raw_data/Level_III_Ecoregions_of_North_America", layer = "North_American_Ecoregions___Level_III")
-states_map <- readOGR(dsn = "01-raw_data/natural_earth_states_provinces", layer = "ne_10m_admin_1_states_provinces")
+ecoregions_map <- readOGR(dsn = "01-raw_data/spatial_data/Level_III_Ecoregions_of_North_America", layer = "North_American_Ecoregions___Level_III")
+# states_map <- readOGR(dsn = "01-raw_data/spatial_data/natural_earth_states_provinces", layer = "ne_10m_admin_1_states_provinces")
+ca_subdivisions <- readOGR(dsn = "01-raw_data/spatial_data/canadian_census_subdivisions", layer = "lcsd000a20a_e")
+us_subdivisions <- readOGR(dsn = "01-raw_data/spatial_data/usa_boundaries/cb_2020_us_county_5m/", layer = "cb_2020_us_county_5m")
 # lgas_map <- readOGR(dsn = "lga_nsw_map", layer = "NSW_LGA_POLYGON_shp")
 
 # This is a function to reverse geocoding based on coordinates
