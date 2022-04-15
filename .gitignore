@@ -4,8 +4,8 @@
 # Include your project-specific ignores in this section
 # ----- Project ignores
  
-spatial_data/*
-*/spatial_data/*
+
+00-spatial_data/*
 bower_components
 node_modules
 .idea
