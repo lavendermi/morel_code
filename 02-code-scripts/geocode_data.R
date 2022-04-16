@@ -54,7 +54,7 @@ us_subdivisions <- us_subdivisions %>%
 
 # now we can join the two data frames to together so that we don't need to do it
 # twice, once for each country. This will cause problems later on as we have
-# duplicate points on shared boundries (US / Canada border for example)
+# duplicate points on shared boundaries (US / Canada border for example)
 na_subdivisions <- rbind(ca_subdivisions, us_subdivisions)
 
 # First step is to figure out which country the point belongs to
@@ -66,7 +66,7 @@ my_results <- st_join(point_geo, countries_map,
 # give our results a CRS
 my_results <- st_transform(my_results, st_crs(ca_subdivisions))
 
-# set sf_use_s2 to false to deal with the shared boundries mentioned above. This
+# set sf_use_s2 to false to deal with the shared boundaries mentioned above. This
 # just ignores the errors.
 sf::sf_use_s2(FALSE)
 
@@ -82,7 +82,7 @@ my_results <- st_join(my_results, ecoregions_map,
   rename(eco_region = NA_L3NAME) %>%
   select(datetime, source_db, scientific_name, geometry, country, prov_state, level_01, level_02, eco_region)
 
-# This is jsut a timer so that we can guage how long it is going to take. Or to
+# This is just a timer so that we can gauge how long it is going to take. Or to
 # know how long it took.
 endg <- Sys.time()
 (endg - startg)
