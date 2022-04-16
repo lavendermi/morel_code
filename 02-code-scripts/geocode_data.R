@@ -3,12 +3,10 @@
 # https://www.infoworld.com/article/3505897/how-to-do-spatial-analysis-in-r-with-sf.html
 
 library(sf)
-library(maps)
-library(lubridate)
 library(tidyverse)
 
-merged_morel_data <- sample_n(read_csv("01-raw_data/merged_morel_data.csv"), 10)
-# merged_morel_data <- read_csv("01-raw_data/merged_morel_data.csv")
+# merged_morel_data <- sample_n(read_csv("01-raw_data/merged_morel_data.csv"), 1000)
+merged_morel_data <- read_csv("01-raw_data/merged_morel_data.csv")
 
 point_geo <- st_as_sf(merged_morel_data,
   coords = c(x = "longitude", y = "latitude"),
@@ -25,6 +23,8 @@ ca_subdivisions <- st_read(dsn = "00-spatial_data/canadian_census_subdivisions",
 us_subdivisions <- st_read(dsn = "00-spatial_data/usa_boundaries/cb_2020_us_county_5m/", layer = "cb_2020_us_county_5m")
 ecoregions_map <- st_read(dsn = "00-spatial_data/Level_III_Ecoregions_of_North_America", layer = "North_American_Ecoregions___Level_III")
 
+point_geo <- st_transform(point_geo, st_crs(countries_map))
+# countries_map <- st_transform(countries_map, st_crs(ca_subdivisions))
 us_subdivisions <- st_transform(us_subdivisions, st_crs(ca_subdivisions))
 ecoregions_map <- st_transform(ecoregions_map, st_crs(ca_subdivisions))
 
@@ -61,3 +61,5 @@ my_results <- st_join(my_results, ecoregions_map,
   rename(eco_region = NA_L3NAME) %>%
   select(datetime, source_db, scientific_name, geometry, country, prov_state, level_01, level_02, eco_region)
 
+endg <- Sys.time()
+(endg - startg)
