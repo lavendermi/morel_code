@@ -1,6 +1,6 @@
 # reverse geolocate
 # this code it modified from: https://rpubs.com/FelipeMonroy/619723
-
+# https://www.infoworld.com/article/3505897/how-to-do-spatial-analysis-in-r-with-sf.html
 
 library(sf)
 library(maps)
