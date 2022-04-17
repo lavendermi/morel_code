@@ -392,7 +392,7 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2017-04-17T08:03:30Z,tgm,NA,"c(7139199.18225156, 462517.069806798)",USA,Ohio,Noble,NA,Western Allegheny Plateau
 2017-04-17T08:13:34Z,tgm,NA,"c(6918754.83930024, 732496.192829052)",USA,Michigan,Wayne,NA,Huron/Erie Lake Plains
 2017-04-17T08:18:08Z,tgm,NA,"c(3915517.13788845, 1778599.38501064)",USA,Washington,Thurston,NA,Strait of Georgia/Puget Lowland
-2017-04-17T08:19:09Z,tgm,NA,"c(7220926.1834545, 560703.837607519)",USA,Pennsylvania,Allegheny,NA,Western Allegheny Plateau
+2017-04-17T08:19:09Z,tgm,NA,"c(7220926.1834545, 560703.837607517)",USA,Pennsylvania,Allegheny,NA,Western Allegheny Plateau
 2017-04-17T08:23:15Z,tgm,NA,"c(6181761.29426814, 583371.569568335)",USA,Iowa,Iowa,NA,Western Corn Belt Plains
 2017-04-17T11:09:13Z,tgm,NA,"c(5927421.35572076, 345257.334291639)",USA,Missouri,Platte,NA,Western Corn Belt Plains
 2017-04-17T11:09:13Z,tgm,NA,"c(6159740.16474074, 561180.884415424)",USA,Iowa,Keokuk,NA,Western Corn Belt Plains
@@ -506,7 +506,7 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2017-04-20T07:50:46Z,tgm,NA,"c(5998938.34815359, 595546.560574967)",USA,Iowa,Dallas,NA,Western Corn Belt Plains
 2017-04-20T07:52:34Z,tgm,NA,"c(5874909.31982485, 560180.109291121)",USA,Iowa,Pottawattamie,NA,Western Corn Belt Plains
 2017-04-20T08:06:50Z,tgm,NA,"c(6686300.04306774, 729046.720438024)",USA,Michigan,Allegan,NA,Southern Michigan/Northern Indiana Drift Plains
-2017-04-20T08:07:12Z,tgm,NA,"c(6182701.89018697, 615568.588149528)",USA,Iowa,Iowa,NA,Western Corn Belt Plains
+2017-04-20T08:07:12Z,tgm,NA,"c(6182701.89018697, 615568.588149527)",USA,Iowa,Iowa,NA,Western Corn Belt Plains
 2017-04-20T08:10:11Z,tgm,NA,"c(6221674.43803358, 609552.462041013)",USA,Iowa,Johnson,NA,Western Corn Belt Plains
 2017-04-20T08:18:27Z,tgm,NA,"c(6870034.10558925, 387126.036428962)",USA,Ohio,Butler,NA,Eastern Corn Belt Plains
 2017-04-20T08:23:49Z,tgm,NA,"c(7164587.56238367, 611860.866086418)",USA,Ohio,Mahoning,NA,Erie Drift Plain
@@ -1574,7 +1574,7 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2018-05-07T20:32:55Z,tgm,NA,"c(6215136.80143168, 558348.326441298)",USA,Iowa,Washington,NA,Western Corn Belt Plains
 2018-05-08T06:50:47Z,tgm,NA,"c(6501341.07172552, 821427.744553598)",USA,Wisconsin,Washington,NA,Southeastern Wisconsin Till Plains
 2018-05-08T06:55:34Z,tgm,NA,"c(7975079.2464794, 936982.447167928)",USA,Massachusetts,Plymouth,NA,Northeastern Coastal Zone
-2018-05-08T07:06:07Z,tgm,NA,"c(7054753.5252051, 479814.019677379)",USA,Ohio,Licking,NA,Western Allegheny Plateau
+2018-05-08T07:06:07Z,tgm,NA,"c(7054753.5252051, 479814.019677381)",USA,Ohio,Licking,NA,Western Allegheny Plateau
 2018-05-08T07:07:49Z,tgm,NA,"c(7033691.77284496, 571390.747903315)",USA,Ohio,Ashland,NA,Erie Drift Plain
 2018-05-08T07:11:43Z,tgm,NA,"c(7267153.74151303, 590119.99772629)",USA,Pennsylvania,Armstrong,NA,Western Allegheny Plateau
 2018-05-08T07:14:03Z,tgm,NA,"c(6729867.8115425, 525712.318382455)",USA,Indiana,Wabash,NA,Eastern Corn Belt Plains
@@ -1630,7 +1630,7 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2018-05-10T06:54:18Z,tgm,NA,"c(6441015.67395944, 480787.760214868)",USA,Illinois,McLean,NA,Central Corn Belt Plains
 2018-05-10T07:12:23Z,tgm,NA,"c(6196072.24503755, 903565.216428909)",USA,Wisconsin,Buffalo,NA,Driftless Area
 2018-05-10T07:14:23Z,tgm,NA,"c(6549477.83238362, 632948.058169425)",USA,Illinois,Cook,NA,Central Corn Belt Plains
-2018-05-10T07:15:57Z,tgm,NA,"c(6541773.38271576, 716770.107676472)",USA,Wisconsin,Kenosha,NA,Central Corn Belt Plains
+2018-05-10T07:15:57Z,tgm,NA,"c(6541773.38271576, 716770.107676473)",USA,Wisconsin,Kenosha,NA,Central Corn Belt Plains
 2018-05-10T07:17:02Z,tgm,NA,"c(7888916.72414339, 967818.828806239)",USA,Massachusetts,Worcester,NA,Northeastern Coastal Zone
 2018-05-10T07:17:31Z,tgm,NA,"c(5943673.7369557, 652431.613838397)",USA,Iowa,Carroll,NA,Western Corn Belt Plains
 2018-05-10T16:11:33Z,tgm,NA,"c(6224669.68338798, 601796.089213914)",USA,Iowa,Johnson,NA,Western Corn Belt Plains
@@ -1866,7 +1866,7 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2018-05-29T08:12:15Z,tgm,NA,"c(6096540.46977509, 982311.247143344)",USA,Minnesota,Ramsey,NA,North Central Hardwood Forests
 2018-05-29T08:12:15Z,tgm,NA,"c(3720760.36713617, 925423.280517167)",USA,California,Sierra,NA,Sierra Nevada
 2018-05-30T15:52:13Z,tgm,NA,"c(6393912.00549061, 1059220.59686998)",USA,Wisconsin,Oneida,NA,Northern Lakes and Forests
-2018-05-31T18:02:10Z,tgm,NA,"c(6504838.3637598, 940491.617259203)",USA,Wisconsin,Brown,NA,North Central Hardwood Forests
+2018-05-31T18:02:10Z,tgm,NA,"c(6504838.3637598, 940491.617259202)",USA,Wisconsin,Brown,NA,North Central Hardwood Forests
 2018-05-31T18:02:10Z,tgm,NA,"c(3947842.48872994, 4214011.94776265)",USA,Alaska,Fairbanks North Star,NA,Interior Bottomlands
 2018-05-31T18:02:10Z,tgm,NA,"c(6093630.36760402, 962975.606875946)",USA,Minnesota,Dakota,NA,North Central Hardwood Forests
 2018-05-31T18:02:10Z,tgm,NA,"c(6819006.59874589, 1021094.45665926)",USA,Michigan,Montmorency,NA,Northern Lakes and Forests
@@ -3345,6 +3345,9 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2020-04-06T20:14:08Z,tgm,NA,"c(7154568.61901941, 124034.445058126)",USA,Virginia,Smyth,NA,Ridge and Valley
 2020-04-06T20:14:08Z,tgm,NA,"c(7577127.7703733, 180914.747149276)",USA,Virginia,Southampton,NA,Southeastern Plains
 2020-04-06T20:14:08Z,tgm,NA,"c(6642405.640736, 430111.481330604)",USA,Indiana,Montgomery,NA,Eastern Corn Belt Plains
+2012-04-24T05:00:00Z,inat,Morchella americana,"c(7231716.70025004, 579674.2786151)",USA,Pennsylvania,Allegheny,NA,Western Allegheny Plateau
+2012-04-18T05:00:00Z,inat,Morchella diminutiva,"c(7222889.45209164, 576285.881598005)",USA,Pennsylvania,Beaver,NA,Western Allegheny Plateau
+2012-04-13T05:00:00Z,inat,Morchella americana,"c(7117307.22774314, 595801.383015116)",USA,Ohio,Stark,NA,Erie Drift Plain
 2020-04-06T20:14:08Z,tgm,NA,"c(7541795.62489619, 465700.409559401)",USA,Maryland,Howard,NA,Northern Piedmont
 2020-04-06T20:14:08Z,tgm,NA,"c(6963474.32537257, 123886.098118413)",USA,Kentucky,Clay,NA,Central Appalachians
 2020-04-06T20:14:08Z,tgm,NA,"c(7117538.48049481, 78254.2556020487)",USA,Tennessee,Sullivan,NA,Ridge and Valley
@@ -4087,7 +4090,7 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2020-05-19T07:26:25Z,tgm,NA,"c(5843204.29348802, 1305632.02159139)",USA,Minnesota,Polk,NA,Lake Manitoba and Lake Agassiz Plain
 2020-05-19T07:27:39Z,tgm,NA,"c(6666482.58260129, 960110.214438347)",USA,Michigan,Benzie,NA,North Central Hardwood Forests
 2020-05-19T07:28:34Z,tgm,NA,"c(3641864.5902191, 947832.447080054)",USA,California,Yuba,NA,Sierra Nevada
-2020-05-19T10:03:35Z,tgm,NA,"c(7928151.82315197, 909380.912703856)",USA,Massachusetts,Bristol,NA,Northeastern Coastal Zone
+2020-05-19T10:03:35Z,tgm,NA,"c(7928151.82315197, 909380.912703857)",USA,Massachusetts,Bristol,NA,Northeastern Coastal Zone
 2020-05-19T13:29:09Z,tgm,NA,"c(6729859.28596256, 694154.250644323)",USA,Michigan,Kalamazoo,NA,Southern Michigan/Northern Indiana Drift Plains
 2020-05-19T19:07:05Z,tgm,NA,"c(6350126.38812196, 775668.207931568)",USA,Wisconsin,Sauk,NA,Driftless Area
 2020-05-19T19:07:05Z,tgm,NA,"c(6448899.0129246, 375077.169764394)",USA,Illinois,Macon,NA,Central Corn Belt Plains
@@ -5434,7 +5437,7 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2022-03-20T13:51:47Z,inat,Morchella angusticeps,"c(6996505.73511049, -55727.4499797206)",USA,Tennessee,Sevier,NA,Blue Ridge
 2022-03-20T01:06:03Z,inat,Morchella rufobrunnea,"c(3447587.32073956, 719809.463269637)",USA,California,Santa Cruz,NA,"California Coastal Sage, Chaparral, and Oak Woodlands"
 2022-03-19T22:15:28Z,inat,Morchella populiphila,"c(3456881.14201662, 902438.430016496)",USA,California,Sonoma,NA,"California Coastal Sage, Chaparral, and Oak Woodlands"
-2022-03-17T19:27:45Z,inat,Morchella angusticeps,"c(7279825.15691741, -20447.2110708812)",USA,North Carolina,Rowan,NA,Piedmont
+2022-03-17T19:27:45Z,inat,Morchella angusticeps,"c(7279825.15691741, -20447.2110708826)",USA,North Carolina,Rowan,NA,Piedmont
 2022-03-16T17:37:39Z,inat,Morchella rufobrunnea,"c(3489733.59150656, 910417.360350228)",USA,California,Napa,NA,"California Coastal Sage, Chaparral, and Oak Woodlands"
 2020-05-15T17:51:00Z,inat,Morchella tridentina,"c(4262516.86325608, 1257230.19971768)",USA,Idaho,Boise,NA,Idaho Batholith
 2022-03-13T19:56:57Z,inat,Morchella rufobrunnea,"c(3449945.29684057, 814523.276876391)",USA,California,San Mateo,NA,"California Coastal Sage, Chaparral, and Oak Woodlands"
@@ -6259,7 +6262,7 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2021-04-26T21:13:22Z,inat,Morchella diminutiva,"c(7520039.0090792, 386151.017884361)",USA,Virginia,Stafford,NA,Southeastern Plains
 2021-04-26T21:10:04Z,inat,Morchella diminutiva,"c(7520102.80120265, 386135.579284191)",USA,Virginia,Stafford,NA,Southeastern Plains
 2021-04-26T21:08:13Z,inat,Morchella diminutiva,"c(7520148.63059496, 386239.852528066)",USA,Virginia,Stafford,NA,Southeastern Plains
-2021-04-26T21:05:28Z,inat,Morchella diminutiva,"c(7519953.77955619, 386197.25561811)",USA,Virginia,Stafford,NA,Southeastern Plains
+2021-04-26T21:05:28Z,inat,Morchella diminutiva,"c(7519953.77955619, 386197.255618109)",USA,Virginia,Stafford,NA,Southeastern Plains
 2021-04-26T21:04:21Z,inat,Morchella diminutiva,"c(7520100.53297624, 386252.151710543)",USA,Virginia,Stafford,NA,Southeastern Plains
 2021-04-26T20:59:44Z,inat,Morchella diminutiva,"c(7519992.86935148, 386247.182946512)",USA,Virginia,Stafford,NA,Southeastern Plains
 2021-04-26T20:56:22Z,inat,Morchella diminutiva,"c(7520059.00226815, 386194.189455326)",USA,Virginia,Stafford,NA,Southeastern Plains
@@ -6293,14 +6296,14 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2021-04-25T21:24:37Z,inat,Morchella punctipes,"c(7251482.94884169, 557443.115632145)",USA,Pennsylvania,Allegheny,NA,Western Allegheny Plateau
 2021-04-25T23:36:24Z,inat,Morchella americana,"c(7000280.3082919, 708476.875914373)",CAN,Ontario,Chatham-Kent,Chatham-Kent,Lake Erie Lowland
 2021-04-25T20:51:04Z,inat,Morchella americana,"c(7538629.20296801, 489019.644043598)",USA,Maryland,Howard,NA,Northern Piedmont
-2021-04-21T16:50:15Z,inat,Morchella punctipes,"c(6691988.48434129, 350312.834949667)",USA,Indiana,Monroe,NA,Interior Plateau
+2021-04-21T16:50:15Z,inat,Morchella punctipes,"c(6691988.48434129, 350312.834949666)",USA,Indiana,Monroe,NA,Interior Plateau
 2021-04-25T22:28:06Z,inat,Morchella angusticeps,"c(7098173.70363146, 615803.278116598)",USA,Ohio,Summit,NA,Erie Drift Plain
 2021-04-25T12:45:25Z,inat,Morchella americana,"c(5889505.07870238, 303122.440795052)",USA,Kansas,Douglas,NA,Central Irregular Plains
 2021-04-25T20:03:30Z,inat,Morchella punctipes,"c(7738591.91457262, 760131.196583231)",USA,New York,Rockland,NA,Northern Piedmont
 2021-04-25T18:35:00Z,inat,Morchella americana,"c(7225527.1242697, 571092.677090551)",USA,Pennsylvania,Allegheny,NA,Western Allegheny Plateau
 2021-04-25T15:19:00Z,inat,Morchella punctipes,"c(7225527.1242697, 571092.677090551)",USA,Pennsylvania,Allegheny,NA,Western Allegheny Plateau
 2021-04-25T17:41:30Z,inat,Morchella angusticeps,"c(7047335.57879211, 1042159.29196175)",CAN,Ontario,Bruce,Northern Bruce Peninsula,Eastern Great Lakes Lowlands
-2021-04-25T22:32:15Z,inat,Morchella diminutiva,"c(7665617.97529771, 598453.379561658)",USA,Pennsylvania,Philadelphia,NA,Northern Piedmont
+2021-04-25T22:32:15Z,inat,Morchella diminutiva,"c(7665617.97529771, 598453.379561659)",USA,Pennsylvania,Philadelphia,NA,Northern Piedmont
 2021-04-25T20:50:27Z,inat,Morchella americana,"c(7282767.38796245, 563993.429420353)",USA,Pennsylvania,Westmoreland,NA,Western Allegheny Plateau
 2021-04-25T22:05:16Z,inat,Morchella punctipes,"c(7189847.95564584, 508802.223695315)",USA,West Virginia,Ohio,NA,Western Allegheny Plateau
 2021-04-25T21:48:43Z,inat,Morchella americana,"c(7628542.8328804, 665740.988237451)",USA,Pennsylvania,Lehigh,NA,Ridge and Valley
@@ -6669,7 +6672,7 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2021-04-10T23:28:10Z,inat,Morchella americana,"c(7060662.24680848, -46071.1838322245)",USA,North Carolina,Haywood,NA,Blue Ridge
 2021-04-10T20:02:00Z,inat,Morchella americana,"c(7664001.54562142, 607026.623654488)",USA,Pennsylvania,Philadelphia,NA,Northern Piedmont
 2021-04-10T23:53:31Z,inat,Morchella angusticeps,"c(7329189.96926296, 582206.075146785)",USA,Pennsylvania,Indiana,NA,Central Appalachians
-2021-04-11T01:22:32Z,inat,Morchella importuna,"c(3438462.34624283, 773044.455803282)",USA,California,San Mateo,NA,Coast Range
+2021-04-11T01:22:32Z,inat,Morchella importuna,"c(3438462.34624283, 773044.455803283)",USA,California,San Mateo,NA,Coast Range
 2021-04-10T23:59:08Z,inat,Morchella angusticeps,"c(7345651.00423229, 584224.478451905)",USA,Pennsylvania,Cambria,NA,Central Appalachians
 2021-04-10T23:42:46Z,inat,Morchella americana,"c(5733230.89151476, -107885.752529575)",USA,Oklahoma,Pottawatomie,NA,Cross Timbers
 2021-04-10T00:01:11Z,inat,Morchella americana,"c(3861849.17666519, 1644936.44951024)",USA,Washington,Clark,NA,Willamette Valley
@@ -8348,7 +8351,7 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2008-05-07T10:00:00Z,inat,Morchella americana,"c(5825834.44498202, 554598.150584391)",USA,Nebraska,Sarpy,NA,Western Corn Belt Plains
 2017-05-14T22:12:41Z,inat,Morchella americana,"c(6930755.53506176, 699508.321882538)",USA,Michigan,Wayne,NA,Huron/Erie Lake Plains
 2019-11-04T05:22:23Z,inat,Morchella rufobrunnea,"c(5236636.19855753, -2162756.57729543)",MEX,NA,NA,NA,"Hills and Sierras with Conifer, Oak, and Mixed Forests"
-2019-05-07T17:19:30Z,inat,Morchella snyderi,"c(3714022.60879141, 843092.490720176)",USA,California,El Dorado,NA,Sierra Nevada
+2019-05-07T17:19:30Z,inat,Morchella snyderi,"c(3714022.60879141, 843092.490720175)",USA,California,El Dorado,NA,Sierra Nevada
 2019-05-17T08:00:00Z,inat,Morchella snyderi,"c(3696233.42966936, 1278191.11014737)",USA,Oregon,Jackson,NA,Cascades
 2018-04-14T00:27:00Z,inat,Morchella americana,"c(3851726.53941088, 1635388.13182957)",USA,Oregon,Multnomah,NA,Willamette Valley
 2019-05-29T23:32:13Z,inat,Morchella americana,"c(7263163.02121361, 1096080.22885482)",CAN,Ontario,Haliburton,Dysart et al,Algonquin/Southern Laurentians
@@ -9564,7 +9567,7 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2018-03-25T14:07:00Z,inat,Morchella americana,"c(6397287.5911749, -161420.446580848)",USA,Tennessee,Shelby,NA,Mississippi Valley Loess Plains
 2018-03-28T13:36:59Z,inat,Morchella esculenta,"c(6390991.82453598, -150191.726645795)",USA,Tennessee,Shelby,NA,Mississippi Valley Loess Plains
 2018-03-24T19:21:59Z,inat,Morchella americana,"c(6723256.30727837, -332498.916889124)",USA,Alabama,Jefferson,NA,Ridge and Valley
-2018-01-23T17:11:17Z,inat,Morchella rufobrunnea,"c(3665898.40456417, 179877.899461268)",USA,California,Orange,NA,"California Coastal Sage, Chaparral, and Oak Woodlands"
+2018-01-23T17:11:17Z,inat,Morchella rufobrunnea,"c(3665898.40456417, 179877.899461266)",USA,California,Orange,NA,"California Coastal Sage, Chaparral, and Oak Woodlands"
 2017-04-13T00:55:29Z,inat,Morchella americana,"c(6468671.31815199, 210996.743263567)",USA,Illinois,Jefferson,NA,Interior River Valleys and Hills
 2018-03-22T20:14:07Z,inat,Morchella rufobrunnea,"c(3654153.90581593, 189093.476805867)",USA,California,Orange,NA,"California Coastal Sage, Chaparral, and Oak Woodlands"
 2018-03-20T18:31:23Z,inat,Morchella diminutiva,"c(6950326.70029459, -280361.576936244)",USA,Georgia,Fulton,NA,Piedmont
@@ -10035,6 +10038,3 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2004-05-04T05:00:00Z,inat,Morchella americana,"c(7093257.579464, 602398.464020728)",USA,Ohio,Summit,NA,Erie Drift Plain
 2006-04-28T05:00:00Z,inat,Morchella punctipes,"c(7096213.1548803, 611553.863254683)",USA,Ohio,Summit,NA,Erie Drift Plain
 2012-04-28T01:24:50Z,inat,Morchella importuna,"c(3984518.44385076, 1817915.4356505)",USA,Washington,King,NA,Strait of Georgia/Puget Lowland
-2012-04-24T05:00:00Z,inat,Morchella americana,"c(7231716.70025004, 579674.2786151)",USA,Pennsylvania,Allegheny,NA,Western Allegheny Plateau
-2012-04-18T05:00:00Z,inat,Morchella diminutiva,"c(7222889.45209164, 576285.881598005)",USA,Pennsylvania,Beaver,NA,Western Allegheny Plateau
-2012-04-13T05:00:00Z,inat,Morchella americana,"c(7117307.22774314, 595801.383015116)",USA,Ohio,Stark,NA,Erie Drift Plain
