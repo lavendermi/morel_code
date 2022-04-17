@@ -3345,6 +3345,9 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2020-04-06T20:14:08Z,tgm,NA,"c(7154568.61901941, 124034.445058126)",USA,Virginia,Smyth,NA,Ridge and Valley
 2020-04-06T20:14:08Z,tgm,NA,"c(7577127.7703733, 180914.747149276)",USA,Virginia,Southampton,NA,Southeastern Plains
 2020-04-06T20:14:08Z,tgm,NA,"c(6642405.640736, 430111.481330604)",USA,Indiana,Montgomery,NA,Eastern Corn Belt Plains
+2012-04-24T05:00:00Z,inat,Morchella americana,"c(7231716.70025004, 579674.2786151)",USA,Pennsylvania,Allegheny,NA,Western Allegheny Plateau
+2012-04-18T05:00:00Z,inat,Morchella diminutiva,"c(7222889.45209164, 576285.881598005)",USA,Pennsylvania,Beaver,NA,Western Allegheny Plateau
+2012-04-13T05:00:00Z,inat,Morchella americana,"c(7117307.22774314, 595801.383015116)",USA,Ohio,Stark,NA,Erie Drift Plain
 2020-04-06T20:14:08Z,tgm,NA,"c(7541795.62489619, 465700.409559401)",USA,Maryland,Howard,NA,Northern Piedmont
 2020-04-06T20:14:08Z,tgm,NA,"c(6963474.32537257, 123886.098118413)",USA,Kentucky,Clay,NA,Central Appalachians
 2020-04-06T20:14:08Z,tgm,NA,"c(7117538.48049481, 78254.2556020487)",USA,Tennessee,Sullivan,NA,Ridge and Valley
@@ -10035,6 +10038,3 @@ datetime,source_db,scientific_name,geometry,country,prov_state,level_01,level_02
 2004-05-04T05:00:00Z,inat,Morchella americana,"c(7093257.579464, 602398.464020728)",USA,Ohio,Summit,NA,Erie Drift Plain
 2006-04-28T05:00:00Z,inat,Morchella punctipes,"c(7096213.1548803, 611553.863254683)",USA,Ohio,Summit,NA,Erie Drift Plain
 2012-04-28T01:24:50Z,inat,Morchella importuna,"c(3984518.44385076, 1817915.4356505)",USA,Washington,King,NA,Strait of Georgia/Puget Lowland
-2012-04-24T05:00:00Z,inat,Morchella americana,"c(7231716.70025004, 579674.2786151)",USA,Pennsylvania,Allegheny,NA,Western Allegheny Plateau
-2012-04-18T05:00:00Z,inat,Morchella diminutiva,"c(7222889.45209164, 576285.881598005)",USA,Pennsylvania,Beaver,NA,Western Allegheny Plateau
-2012-04-13T05:00:00Z,inat,Morchella americana,"c(7117307.22774314, 595801.383015116)",USA,Ohio,Stark,NA,Erie Drift Plain

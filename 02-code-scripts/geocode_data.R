@@ -5,6 +5,9 @@ library(sf)
 library(tidyverse)
 library(parallel)
 
+# cluster <- new_cluster(3)
+# cluster_library(cluster, "dplyr")
+
 # uncomment the line below to work with a subset of the data (for testing)
 # merged_morel_data <- sample_n(read_csv("01-raw_data/merged_morel_data.csv"), 100)
 
@@ -72,11 +75,8 @@ sf::sf_use_s2(FALSE)
 
 # First step is to figure out which country the point belongs to
 my_results <- st_par(point_geo, st_join,
-  n_cores = 3, countries_map,
-  join = st_within
-)
-
-my_results <- st_join(point_geo, countries_map,
+  n_cores = 3,
+  countries_map,
   join = st_within
 ) %>%
   select(c(datetime, source_db, scientific_name, geometry, ADM0_A3)) %>%
@@ -86,12 +86,16 @@ my_results <- st_join(point_geo, countries_map,
 my_results <- st_transform(my_results, st_crs(ca_subdivisions))
 
 # Reverse geo-locate the census or county subdivisions for each observation
-my_results <- st_join(my_results, na_subdivisions,
+my_results <- st_par(my_results, st_join,
+  n_cores = 3,
+  na_subdivisions,
   join = st_within
 )
 
 # Reverse geo-locate the ecoregion for each observation
-my_results <- st_join(my_results, ecoregions_map,
+my_results <- st_par(my_results, st_join,
+  n_cores = 3,
+  ecoregions_map,
   join = st_within
 ) %>%
   rename(eco_region = NA_L3NAME) %>%
@@ -115,14 +119,21 @@ st_par <- function(sf_df, sf_func, n_cores, ...) {
   split_results <- split(sf_df, split_vector) %>%
     mclapply(function(x) sf_func(x, ...), mc.cores = n_cores)
 
-  # Combine results back together. Method of combining depends on the output from the function.
-  if (length(class(split_results[[1]])) > 1 | class(split_results[[1]])[1] == "list") {
-    result <- do.call("c", split_results)
-    names(result) <- NULL
-  } else {
-    result <- do.call("rbind", split_results)
-  }
+  # Combine results back together. Method of combining might depend on the
+  # output from the function. For st_join it is a list of sf objects. This
+  # satisfies my needs for reverse geocoding
+  result <- dplyr::bind_rows(split_results)
 
   # Return result
   return(result)
 }
+
+# # Parallelise any simple features analysis.
+# # This does not work. The sf functions can't work with a 'multidplyr_party_df'
+# st_par <- function(sf_df, sf_func, n_cores, ...) {
+#
+#   sf_df %>%
+#     partition(cluster) %>%
+#     sf_func(as.data.frame(x), ...) %>%
+#     collect()
+# }
