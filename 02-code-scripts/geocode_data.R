@@ -1,9 +1,14 @@
 # reverse geolocate
 # https://www.infoworld.com/article/3505897/how-to-do-spatial-analysis-in-r-with-sf.html
 
+
+library(raster)
+library(terra)
 library(sf)
 library(tidyverse)
 library(parallel)
+
+source("02-code-scripts/source_parallel_sf.R")
 
 # uncomment the line below to work with a subset of the data (for testing)
 # merged_morel_data <- sample_n(read_csv("01-raw_data/merged_morel_data.csv"), 100)
@@ -43,6 +48,9 @@ ecoregions_map <-
     dsn = "00-spatial_data/Level_III_Ecoregions_of_North_America",
     layer = "North_American_Ecoregions___Level_III"
   )
+
+lulc_map <-
+  raster("00-spatial_data/north_america_2015_v2/NA_NALCMS_2015_v2_land_cover_30m/NA_NALCMS_2015_v2_land_cover_30m.tif")
 
 
 # set the CRS for all of the maps (except the countries_map) to be the same CRS
@@ -98,6 +106,9 @@ my_results <- st_par(my_results, st_join,
   rename(eco_region = NA_L3NAME) %>%
   select(datetime, source_db, scientific_name, geometry, country, prov_state, level_01, level_02, eco_region)
 
+# Land use land cover from raster - SLOW
+my_results <- add_column(lulc = terra::extract(lulc_map, point_geo), my_results)
+
 # This is just a timer so that we can gauge how long it is going to take. Or to
 # know how long it took.
 endg <- Sys.time()
@@ -106,22 +117,4 @@ endg <- Sys.time()
 write_csv(my_results, "01-raw_data/merged_morel_data_plus.csv")
 
 
-# Parallelise any simple features analysis.
-st_par <- function(sf_df, sf_func, n_cores, ...) {
-
-  # Create a vector to split the data set up by.
-  split_vector <- rep(1:n_cores, each = nrow(sf_df) / n_cores, length.out = nrow(sf_df))
-
-  # Perform GIS analysis
-  split_results <- split(sf_df, split_vector) %>%
-    mclapply(function(x) sf_func(x, ...), mc.cores = n_cores)
-
-  # Combine results back together. Method of combining might depend on the
-  # output from the function. For st_join it is a list of sf objects. This
-  # satisfies my needs for reverse geocoding
-  result <- dplyr::bind_rows(split_results)
-
-  # Return result
-  return(result)
-}
 
