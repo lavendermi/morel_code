@@ -5,9 +5,6 @@ library(sf)
 library(tidyverse)
 library(parallel)
 
-# cluster <- new_cluster(3)
-# cluster_library(cluster, "dplyr")
-
 # uncomment the line below to work with a subset of the data (for testing)
 # merged_morel_data <- sample_n(read_csv("01-raw_data/merged_morel_data.csv"), 100)
 
@@ -128,12 +125,3 @@ st_par <- function(sf_df, sf_func, n_cores, ...) {
   return(result)
 }
 
-# # Parallelise any simple features analysis.
-# # This does not work. The sf functions can't work with a 'multidplyr_party_df'
-# st_par <- function(sf_df, sf_func, n_cores, ...) {
-#
-#   sf_df %>%
-#     partition(cluster) %>%
-#     sf_func(as.data.frame(x), ...) %>%
-#     collect()
-# }
