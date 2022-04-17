@@ -4,7 +4,7 @@
 
 library(raster)
 library(terra)
-library(sf)
+library(sf) # this needs to come after terra or raster
 library(tidyverse)
 library(parallel)
 
