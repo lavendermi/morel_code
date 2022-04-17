@@ -3,11 +3,12 @@
 
 library(sf)
 library(tidyverse)
+library(parallel)
 
 # uncomment the line below to work with a subset of the data (for testing)
 # merged_morel_data <- sample_n(read_csv("01-raw_data/merged_morel_data.csv"), 100)
 
-merged_morel_data <- 
+merged_morel_data <-
   read_csv("01-raw_data/merged_morel_data.csv")
 
 # apply a CRS to the point data and turn it into a spatial df
@@ -19,21 +20,29 @@ point_geo <- st_as_sf(merged_morel_data,
 startg <- Sys.time()
 
 # Load all of the maps
-countries_map <- 
-  st_read(dsn = "00-spatial_data/ne_10m_admin_0_countries", 
-          layer = "ne_10m_admin_0_countries")
+countries_map <-
+  st_read(
+    dsn = "00-spatial_data/ne_10m_admin_0_countries",
+    layer = "ne_10m_admin_0_countries"
+  )
 
-ca_subdivisions <- 
-  st_read(dsn = "00-spatial_data/canadian_census_subdivisions", 
-          layer = "lcsd000a20a_e")
+ca_subdivisions <-
+  st_read(
+    dsn = "00-spatial_data/canadian_census_subdivisions",
+    layer = "lcsd000a20a_e"
+  )
 
-us_subdivisions <- 
-  st_read(dsn = "00-spatial_data/usa_boundaries/cb_2020_us_county_5m/", 
-          layer = "cb_2020_us_county_5m")
+us_subdivisions <-
+  st_read(
+    dsn = "00-spatial_data/usa_boundaries/cb_2020_us_county_5m/",
+    layer = "cb_2020_us_county_5m"
+  )
 
-ecoregions_map <- 
-  st_read(dsn = "00-spatial_data/Level_III_Ecoregions_of_North_America", 
-          layer = "North_American_Ecoregions___Level_III")
+ecoregions_map <-
+  st_read(
+    dsn = "00-spatial_data/Level_III_Ecoregions_of_North_America",
+    layer = "North_American_Ecoregions___Level_III"
+  )
 
 
 # set the CRS for all of the maps (except the countries_map) to be the same CRS
@@ -57,18 +66,24 @@ us_subdivisions <- us_subdivisions %>%
 # duplicate points on shared boundaries (US / Canada border for example)
 na_subdivisions <- rbind(ca_subdivisions, us_subdivisions)
 
+# set sf_use_s2 to false to deal with the shared boundaries mentioned above. This
+# just ignores the errors.
+sf::sf_use_s2(FALSE)
+
 # First step is to figure out which country the point belongs to
+my_results <- st_par(point_geo, st_join,
+  n_cores = 3, countries_map,
+  join = st_within
+)
+
 my_results <- st_join(point_geo, countries_map,
-  join = st_within) %>%
+  join = st_within
+) %>%
   select(c(datetime, source_db, scientific_name, geometry, ADM0_A3)) %>%
   rename(country = ADM0_A3)
 
 # give our results a CRS
 my_results <- st_transform(my_results, st_crs(ca_subdivisions))
-
-# set sf_use_s2 to false to deal with the shared boundaries mentioned above. This
-# just ignores the errors.
-sf::sf_use_s2(FALSE)
 
 # Reverse geo-locate the census or county subdivisions for each observation
 my_results <- st_join(my_results, na_subdivisions,
@@ -88,3 +103,26 @@ endg <- Sys.time()
 (endg - startg)
 
 write_csv(my_results, "01-raw_data/merged_morel_data_plus.csv")
+
+
+# Parallelise any simple features analysis.
+st_par <- function(sf_df, sf_func, n_cores, ...) {
+
+  # Create a vector to split the data set up by.
+  split_vector <- rep(1:n_cores, each = nrow(sf_df) / n_cores, length.out = nrow(sf_df))
+
+  # Perform GIS analysis
+  split_results <- split(sf_df, split_vector) %>%
+    mclapply(function(x) sf_func(x, ...), mc.cores = n_cores)
+
+  # Combine results back together. Method of combining depends on the output from the function.
+  if (length(class(split_results[[1]])) > 1 | class(split_results[[1]])[1] == "list") {
+    result <- do.call("c", split_results)
+    names(result) <- NULL
+  } else {
+    result <- do.call("rbind", split_results)
+  }
+
+  # Return result
+  return(result)
+}
